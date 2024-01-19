@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  font-family: "nanumsquare";
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +30,16 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.black-nav {
+  background: black;
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 @keyframes App-logo-spin {
