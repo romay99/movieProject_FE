@@ -1,48 +1,27 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import HomePage from "./pages/HomePage";
+import About from "./pages/About";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  let [글제목, 글제목변경] = useState(["애월", "제주", "제주공항"]);
-  let [따봉, 따봉변경] = useState(0);
-
   return (
     <div className="App">
-      <div className="black-nav">MovieProject</div>
-      <div className="list">
-        <h4 className="">
-          {글제목[0]}
-          <span
-            onClick={() => {
-              따봉변경(따봉 + 1);
-            }}>
-            😍
-          </span>
-          {따봉}
-        </h4>
-        <p>날짜</p>
-        <hr />
-      </div>
-      <div className="list">
-        <h4 className="">{글제목[1]}</h4>
-        <p>날짜</p>
-        <hr />
-      </div>
-      <div className="list">
-        <h4 className="">{글제목[2]}</h4>
-        <p>날짜</p>
-        <hr />
-      </div>
-      <Modal></Modal>
-    </div>
-  );
-}
+      <nav>
+        <div className="black-nav">
+          <Link to="/">
+            <span className="main-menu">Home</span> |
+          </Link>
+          <Link to="/about">
+            <span className="about">About</span>
+          </Link>
+        </div>
+      </nav>
 
-function Modal() {
-  return (
-    <div className="modal">
-      <h3>글 제목</h3>
-      <p>글 내용</p>
+      <Routes>
+        <Route path="/" element={<HomePage></HomePage>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+      </Routes>
     </div>
   );
 }
