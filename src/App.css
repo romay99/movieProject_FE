@@ -32,19 +32,6 @@ body {
   color: #61dafb;
 }
 
-.black-nav {
-  background: black;
-  width: 100%;
-  display: flex;
-  color: white;
-  padding: 20px;
-  font-weight: 600;
-  font-size: 20px;
-}
-.login {
-  align-items: end;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

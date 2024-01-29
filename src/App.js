@@ -1,26 +1,28 @@
 import React from "react";
 import "./App.css";
-import HomePage from "./pages/HomePage";
-import About from "./pages/About";
+import LoginForm from "./pages/LoginForm";
+import MainPage from "./pages/MainPage";
 import { Routes, Route, Link } from "react-router-dom";
+import SignupForm from "./pages/SignUpForm";
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <div className="black-nav">
-          <Link to="/">
-            <span className="main-menu">Home</span> |
-          </Link>
-          <Link to="/about">
-            <span className="about">About</span>
-          </Link>
-        </div>
+        <span className="main">
+          <Link to={"/"}>메인홈페이지로</Link>
+        </span>
+        <span className="login">
+          <Link to={"/login"}>로그인창으로</Link>
+        </span>
+        <span className="signup">
+          <Link to={"/signup"}>회원가입창으로</Link>
+        </span>
       </nav>
-
       <Routes>
-        <Route path="/" element={<HomePage></HomePage>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/login" element={<LoginForm></LoginForm>}></Route>
+        <Route path="/" element={<MainPage></MainPage>}></Route>
+        <Route path="/signup" element={<SignupForm></SignupForm>}></Route>
       </Routes>
     </div>
   );
