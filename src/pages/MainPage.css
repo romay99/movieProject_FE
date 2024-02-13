@@ -1,0 +1,28 @@
+.poster-image {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.poster-container {
+  background-color: rgb(220, 216, 209);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1%;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-item {
+  margin-right: 10px; /* 포스터 사이의 간격 조절 */
+}
+
+.movie-title {
+  font-size: 20px;
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+  overflow: hidden; /* 너무 긴 텍스트를 숨김 */
+  text-overflow: ellipsis; /* 텍스트가 일정 길이를 초과할 경우 "..."으로 생략 */
+  width: 200px;
+}

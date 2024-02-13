@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -24,22 +25,24 @@ const LoginForm = () => {
 
   return (
     <div>
-      <h2>Login</h2>
-      <form>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="username" value={username} onChange={handleUsernameChange} />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input type="password" id="password" value={password} onChange={handlePasswordChange} />
-        </div>
-        <div>
-          <button type="button" onClick={handleLogin}>
-            Login
-          </button>
-        </div>
-      </form>
+      <h2>로그인</h2>
+      <div className="login-form">
+        <form>
+          <div className="login-element">
+            <label htmlFor="username">아이디 : </label>
+            <input type="text" id="username" value={username} onChange={handleUsernameChange} />
+          </div>
+          <div className="login-element">
+            <label htmlFor="password">비밀번호 : </label>
+            <input type="password" id="password" value={password} onChange={handlePasswordChange} />
+          </div>
+          <div className="login-element">
+            <button type="button" onClick={handleLogin} id="login-button">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

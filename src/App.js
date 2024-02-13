@@ -8,7 +8,7 @@ import SignupForm from "./pages/SignUpForm";
 function App() {
   return (
     <div className="App">
-      <nav>
+      <nav className="nav-bar">
         <span className="main">
           <Link to={"/"}>메인홈페이지로</Link>
         </span>
